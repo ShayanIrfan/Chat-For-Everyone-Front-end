@@ -1,0 +1,138 @@
+main{
+    overflow-x: hidden !important;
+}
+
+.header{
+    width: 100%;
+    height: 10vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+}
+
+.Logo{
+    font-family: var(--headings-font);
+    font-weight: var(--font-bolder);
+    font-size: var(--h3-font-size);
+}
+
+.sunIcon{
+    margin-left: 96%;
+    font-size: var(--h3-font-size);
+}
+
+.formDiv{
+    height: 87vh;
+    padding: 13% 30% 0;
+}
+
+.label{
+    font-family: var(--headings-font);
+    font-weight: var(--font-semi-bold);
+    font-size: var(--normal-font-size);
+    margin-bottom: 0.7rem;
+}
+
+.inputField{
+    margin-bottom: 1rem;
+    background-color: var(--Fifteen-percent-color);
+    border: none;
+    width: 100%;
+    border-radius: 3px;
+    padding: 0.75rem 1rem;
+    font-family: var(--body-font);
+    font-size: var(--small-font-size);
+    color: var(--Text-color);
+}
+
+.inputField:focus{
+    outline: none;
+}
+
+.checkBoxDiv{
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    margin-bottom: 1rem;
+}
+
+label{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.checkBoxDiv input{
+    position: absolute;
+    transform: scale(0);
+}
+
+.checkBoxDiv label{
+    cursor: pointer;
+}
+
+.checkBox{
+    display: block;
+    width: 20px;
+    height: 20px;
+    border: 4px solid var(--Fifteen-percent-color);
+    transition: all 0.35s;
+}
+
+input:checked ~ .checkBox {
+    transform: rotate(45deg);
+    width: 12px;
+    border-color: var(--Five-percent-color);
+    border-top-color: transparent;
+    border-left-color: transparent;
+}
+
+.checkBoxText{
+    margin-left: 0.5rem;
+    font: var(--headings-font);
+    font-weight: var(--font-bolder);
+    color: var(--Five-percent-color);
+}
+
+.submitBtn{
+    background-color: var(--Five-percent-color);
+    border: none;
+    width: 100%;
+    border-radius: 3px;
+    padding: 0.75rem 1rem;
+    font-family: var(--headings-font);
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-bold);
+    transition: 0.3s all;
+}
+
+.submitBtn:hover{
+    cursor: pointer;
+    background-color: var(--hover-color);
+}
+
+.signUpBtnDiv{
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+.signUpBtnDiv p{
+    font: var(--headings-font);
+    font-weight: var(--font-bold);
+    color: var(--Text-color);
+}
+
+.signUpBtn{
+    margin-left: 0.2rem;
+    border: none;
+    font: var(--headings-font);
+    background-color: transparent;
+    font-weight: var(--font-bold);
+    color: var(--Five-percent-color);
+    transition: 0.3s all;
+}
+
+.signUpBtn:hover{
+    cursor: pointer;
+    color: var(--hover-color);
+}

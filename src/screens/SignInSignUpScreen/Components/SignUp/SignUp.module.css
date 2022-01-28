@@ -1,0 +1,94 @@
+main{
+    overflow-x: hidden !important;
+}
+
+.header{
+    width: 100%;
+    height: 10vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+}
+
+.Logo{
+    font-family: var(--headings-font);
+    font-weight: var(--font-bolder);
+    font-size: var(--h3-font-size);
+}
+
+.sunIcon{
+    margin-left: 96%;
+    font-size: var(--h3-font-size);
+}
+
+.formDiv{
+    height: 87vh;
+    padding: 7% 30% 0;
+}
+
+.label{
+    font-family: var(--headings-font);
+    font-weight: var(--font-semi-bold);
+    font-size: var(--normal-font-size);
+    margin-bottom: 0.5rem;
+}
+
+.inputField{
+    margin-bottom: 0.7rem;
+    background-color: var(--Fifteen-percent-color);
+    border: none;
+    width: 100%;
+    border-radius: 3px;
+    padding: 0.75rem 1rem;
+    font-family: var(--body-font);
+    font-size: var(--small-font-size);
+    color: var(--Text-color);
+}
+
+.inputField:focus{
+    outline: none;
+}
+
+.submitBtn{
+    background-color: var(--Five-percent-color);
+    border: none;
+    width: 100%;
+    border-radius: 3px;
+    padding: 0.75rem 1rem;
+    font-family: var(--headings-font);
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-bold);
+    transition: 0.3s all;
+}
+
+.submitBtn:hover{
+    cursor: pointer;
+    background-color: var(--hover-color);
+}
+
+.signInBtnDiv{
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+.signInBtnDiv p{
+    font: var(--headings-font);
+    font-weight: var(--font-bold);
+    color: var(--Text-color);
+}
+
+.signInBtn{
+    margin-left: 0.2rem;
+    background-color: transparent;
+    border: none;
+    font: var(--headings-font);
+    font-weight: var(--font-bold);
+    color: var(--Five-percent-color);
+    transition: 0.3s all;
+}
+
+.signInBtn:hover{
+    cursor: pointer;
+    color: var(--hover-color);
+}

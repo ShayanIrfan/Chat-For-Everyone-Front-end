@@ -1,0 +1,29 @@
+.MediaBox__main{
+    border: 2px solid greenyellow;
+    height: 25%;
+}
+
+.MediaHead {
+    padding: 20px 10px 20px 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.MediaHead p {
+    margin-top: 10px;
+}
+
+.Media__container {
+    overflow-x: auto;
+    white-space: nowrap;
+    height: 100px;
+}
+
+.Media__container div {
+    display: inline-block;
+    border-radius: 10px;
+    background-color: grey;
+    height: 80px;
+    width: 80px;
+}

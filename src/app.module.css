@@ -1,0 +1,125 @@
+/*==================== VARIABLES CSS ====================*/
+
+:root {
+
+  /*========== Colors ==========*/
+  --Eighty-percent-color: hsl(0, 0%, 90%);
+  --Fifteen-percent-color: hsl(0, 0%, 80%);
+  --Partition-line-color : hsl(0, 0%, 25%);
+  --Text-color: hsl(0, 0%, 0%);
+  --Five-percent-color: hsl(190, 99%, 33%);
+  --hover-color : hsl(190, 99%, 31%);
+
+  /*========== Font and typography ==========*/
+  --body-font: 'Montserrat', sans-serif;
+  --headings-font: 'Poppins', sans-serif;
+  --big-font-size: 2rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1.125rem;
+  --normal-font-size: .938rem; 
+  --small-font-size: .813rem;
+  --smaller-font-size: .75rem;
+
+  /*========== Font weight ==========*/
+  --font-medium: 500;
+  --font-semi-bold: 600;
+  --font-bold: 700;
+  --font-bolder: 800;
+
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+  --z-modal: 1000;
+}
+
+/*========== Variables Dark theme ==========*/
+
+body.darkTheme {
+  /* HSL color mode */
+  --Eighty-percent-color: hsl(0, 0%, 9%);
+  --Fifteen-percent-color: hsl(0, 0%, 20%);
+  --Partition-line-color : hsl(0, 0%, 53%);
+  --Text-color: hsl(0, 0%, 100%);
+  --Five-percent-color: hsl(191, 99%, 67%);
+  --hover-color : hsl(191, 99%, 65%);
+}
+
+/* Font size for large devices */
+
+@media screen and (min-width: 968px) {
+  :root {
+    --big-font-size: 3rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: 0.875rem;
+    --smaller-font-size: 0.813rem;
+  }
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-size: var(--normal-font-size);
+  font-family: var(--body-font);
+  background-color: var(--Eighty-percent-color);
+  color: var(--Text-color);
+  transition: .5s all;
+}
+
+input{
+  transition: .5s all;
+}
+
+h1, h2, h3, h4 {
+  font-weight: var(--font-semi-bold);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+  /*========== Reusable CSS ==========*/
+
+  .subDiv{
+    padding: 1rem 4rem 0;
+  }
+
+
+.app__main {
+  display: flex;
+  width: 1280px;
+  height: 720px;
+}
+
+.LeftPanel__main {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  height: 100%;
+}
+
+.MidPanel__main {
+  width: 55%;
+  height: 100%;
+}
+
+.RightPanel__main {
+  width: 20%;
+  height: 100%;
+}

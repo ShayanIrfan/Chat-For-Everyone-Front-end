@@ -1,0 +1,59 @@
+.ChatMessages__main{
+    border: 2px solid violet;
+    height: 80%;
+    overflow: auto;
+    padding: 20px;
+    position: relative;
+}
+
+.Box1{
+    overflow: hidden; 
+    margin:1.5% 0 1.5%;
+	padding: 0 0 0 10px;
+	vertical-align: top;
+		 
+}
+
+.Box2{
+    overflow:hidden; 
+    margin:1.5% 0 1.5%;
+
+}
+
+.Box2 h3{
+    text-align: right;
+}
+.Box1,.Box2{
+    margin-top: 0.5%;
+}
+.Box2 .msg{
+    float: right;	  
+    width: auto;
+    text-align: right;
+}
+.Box1 .msg {
+    float: left;
+	width: auto;
+    text-align: left;
+    background-color: rgb(0, 255, 221);
+    border-radius: 2px 30px 30px 30px;
+    margin-top: 3px
+}
+
+.Box2 .msg {
+    text-align: end;
+    border-radius: 30px 2px 30px 30px;
+    margin-top: 5px
+}
+.DBox1{
+  overflow:hidden; 
+    margin:1.5% 0 1.5%;
+		  padding: 0 0 0 10px;
+		  vertical-align: top;
+             float: left;
+		  width: auto;
+      text-align: left;
+    background-color: rgb(0, 255, 221);
+    border-radius: 2px 30px 30px 30px;
+    margin-top: 3px
+}

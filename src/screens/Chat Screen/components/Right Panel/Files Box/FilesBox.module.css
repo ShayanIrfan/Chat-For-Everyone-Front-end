@@ -1,0 +1,27 @@
+.FilesBox__main{
+    border: 2px solid mediumslateblue;
+    height: 37%;
+}
+
+.MediaHead {
+    padding: 20px 10px 20px 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+}
+
+.MediaHead p {
+    margin-top: 10px;
+}
+
+.Files__doc {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    border-bottom:2px solid #5ae0fe;
+}
+
+.Files__doc:hover {
+    background-color: #3333;
+}

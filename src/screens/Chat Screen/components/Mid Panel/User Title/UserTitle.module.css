@@ -1,0 +1,20 @@
+.UserTitle__main{
+    border: 2px solid purple;
+    height: 10%;
+}
+.UserTitle__name{
+    display: flex;
+    justify-content: center;
+    font-style: var(--headings-font);
+    font-size: 39px;
+    font-weight: 700;
+}
+.UserTitle__status{
+    font-style: var(--body-font);
+    margin: 0.5%;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+
+}
