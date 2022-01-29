@@ -6,17 +6,69 @@ const FilesBox = () => {
         <div className={Styles.FilesBox__main} >
             <div className={Styles.MediaHead}>
                 <h1>Files</h1>
-
-                <p>View All</p>
             </div>
 
-            <div>
+            <div className={Styles.Files__docMain}>
                 <div className={Styles.Files__doc}>
-                    <div><span className="iconify" data-icon="carbon:document" data-width="25"></span></div>
-                    <div><p style={{fontSize: "18px", marginTop: "5px"}}>Documents name</p></div>
+                    <div><span className="iconify" data-icon="carbon:document" data-width="24"></span></div>
+                    <div><p style={{fontSize: "15px", marginTop: "5px"}}>Documents name</p></div>
                     <div>
-                        <p style={{fontSize: "12px"}}>12 sep</p>
-                        <p style={{fontSize: "14px"}}>19 mb</p>
+                        <p style={{fontSize: "11px"}}>12 sep</p>
+                        <p style={{fontSize: "13px"}}>19 mb</p>
+                    </div>
+                </div>
+
+                <div className={Styles.Files__doc}>
+                    <div><span className="iconify" data-icon="carbon:document" data-width="24"></span></div>
+                    <div><p style={{fontSize: "15px", marginTop: "5px"}}>Documents name</p></div>
+                    <div>
+                        <p style={{fontSize: "11px"}}>12 sep</p>
+                        <p style={{fontSize: "13px"}}>19 mb</p>
+                    </div>
+                </div>
+
+                <div className={Styles.Files__doc}>
+                    <div><span className="iconify" data-icon="carbon:document" data-width="24"></span></div>
+                    <div><p style={{fontSize: "15px", marginTop: "5px"}}>Documents name</p></div>
+                    <div>
+                        <p style={{fontSize: "11px"}}>12 sep</p>
+                        <p style={{fontSize: "13px"}}>19 mb</p>
+                    </div>
+                </div>
+
+                <div className={Styles.Files__doc}>
+                    <div><span className="iconify" data-icon="carbon:document" data-width="24"></span></div>
+                    <div><p style={{fontSize: "15px", marginTop: "5px"}}>Documents name</p></div>
+                    <div>
+                        <p style={{fontSize: "11px"}}>12 sep</p>
+                        <p style={{fontSize: "13px"}}>19 mb</p>
+                    </div>
+                </div>
+
+                <div className={Styles.Files__doc}>
+                    <div><span className="iconify" data-icon="carbon:document" data-width="24"></span></div>
+                    <div><p style={{fontSize: "15px", marginTop: "5px"}}>Documents name</p></div>
+                    <div>
+                        <p style={{fontSize: "11px"}}>12 sep</p>
+                        <p style={{fontSize: "13px"}}>19 mb</p>
+                    </div>
+                </div>
+
+                <div className={Styles.Files__doc}>
+                    <div><span className="iconify" data-icon="carbon:document" data-width="24"></span></div>
+                    <div><p style={{fontSize: "15px", marginTop: "5px"}}>Documents name</p></div>
+                    <div>
+                        <p style={{fontSize: "11px"}}>12 sep</p>
+                        <p style={{fontSize: "13px"}}>19 mb</p>
+                    </div>
+                </div>
+                
+                <div className={Styles.Files__doc}>
+                    <div><span className="iconify" data-icon="carbon:document" data-width="24"></span></div>
+                    <div><p style={{fontSize: "15px", marginTop: "5px"}}>Documents name</p></div>
+                    <div>
+                        <p style={{fontSize: "11px"}}>12 sep</p>
+                        <p style={{fontSize: "13px"}}>19 mb</p>
                     </div>
                 </div>
             </div>

@@ -66,10 +66,8 @@ body.darkTheme {
 }
 
 body{
-  font-size: var(--normal-font-size);
-  font-family: var(--body-font);
-  background-color: var(--Eighty-percent-color);
-  color: var(--Text-color);
+  background-color: hsl(0, 0%, 20%);
+  color: hsl(0, 0%, 100%);
   transition: .5s all;
 }
 
@@ -78,7 +76,7 @@ input{
 }
 
 h1, h2, h3, h4 {
-  font-weight: var(--font-semi-bold);
+  font-family: 'Poppins', sans-serif;
 }
 
 ul {
@@ -105,6 +103,8 @@ img {
   display: flex;
   width: 1280px;
   height: 720px;
+  background-color: hsl(0, 0%, 9%);
+  font-family: 'Montserrat', sans-serif;
 }
 
 .LeftPanel__main {

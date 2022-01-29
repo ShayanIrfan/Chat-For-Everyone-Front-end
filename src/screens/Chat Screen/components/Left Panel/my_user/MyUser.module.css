@@ -2,7 +2,7 @@
   margin: auto;
   display: flex;
   align-items: center;
-  border: 1px solid black;
+  background-color: hsl(0, 0%, 20%);
   width: 250px;
   height: 90px;
   padding: 7px;
@@ -12,9 +12,24 @@
 .MyUser__minibox{
   display: flex;
   align-items: center;
+  border-bottom: 1px solid #878686;
   height: 20%;
 }
 
 .onlineDisplay{
   margin-top: 12px;
+  margin-left: 2px;
+}
+
+.onlineDisplay h2 {
+  font-size: 25px;
+}
+
+.onlineDisplay h4 span {
+  font-size: 15px;
+  margin-left: 2px;
+}
+
+.onlineDisplay h4 {
+  margin-top: -5px;
 }

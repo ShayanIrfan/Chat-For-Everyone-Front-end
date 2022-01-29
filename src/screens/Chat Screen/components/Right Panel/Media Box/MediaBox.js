@@ -6,8 +6,6 @@ const MediaBox = () => {
     <div className={Styles.MediaBox__main} >
       <div className={Styles.MediaHead}>
           <h1>Media</h1>
-
-          <p>View All</p>
       </div>
 
       <div className={Styles.Media__container}>
@@ -15,7 +13,6 @@ const MediaBox = () => {
         <div></div>
         <div></div>
         <div></div>
-        <span>View more</span>
       </div>
     </div>
   )

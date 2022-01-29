@@ -1,29 +1,27 @@
 .MediaBox__main{
-    border: 2px solid greenyellow;
-    height: 25%;
+    height: 22.5%;
+    border-bottom: 1px solid #878686;
 }
 
 .MediaHead {
-    padding: 20px 10px 20px 10px;
+    padding: 15px 15px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 
-.MediaHead p {
-    margin-top: 10px;
-}
-
 .Media__container {
     overflow-x: auto;
     white-space: nowrap;
-    height: 100px;
-}
+    height: 82px; 
+    padding: 0px 10px; 
+}  
 
 .Media__container div {
     display: inline-block;
     border-radius: 10px;
-    background-color: grey;
-    height: 80px;
-    width: 80px;
+    background-color: #404040;
+    height: 70px; 
+    width: 70px; 
+    margin-right: 5px;   
 }

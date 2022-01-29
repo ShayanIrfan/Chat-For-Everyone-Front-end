@@ -1,6 +1,8 @@
 .MessageBox__main{
-    border: 2px solid brown;
     height: 10%;
+    background-color: #404040;
+    border-right: 1px solid #878686;
+    border-left: 1px solid #878686;
 }
 
 .MessageBox__subMain{
@@ -8,15 +10,15 @@
     align-items: center;
     justify-content: center;
     flex: nowrap;
-    margin-top: 1.5%;
+    padding-top: 1.5%;
     width: 96%;
     font-size: larger;
 }
 
-.uploadFile:hover,.sendMsg:hover{
-color: var(--Five-percent-color);
+.sendMsg:hover{
+    color: hsl(191, 99%, 65%);
 }
 
-.uploadFile,.sendMsg{
-    color: var(--Partition-line-color)
+.sendMsg{
+    color: hsla(0, 0%, 100%, 0.808);
 }

@@ -1,17 +1,19 @@
 .UserTitle__main{
-    border: 2px solid purple;
-    height: 10%;
+    border-bottom: 1px solid #878686;
+    border-right: 1px solid #878686;
+    border-left: 1px solid #878686;
+    height: 15%;
+    padding-top: 5px;
 }
 .UserTitle__name{
     display: flex;
     justify-content: center;
     font-style: var(--headings-font);
-    font-size: 39px;
+    font-size: 40px;
     font-weight: 700;
 }
 .UserTitle__status{
-    font-style: var(--body-font);
-    margin: 0.5%;
+    margin-top: -7px;
     display: flex;
     align-items: center;
     align-content: center;

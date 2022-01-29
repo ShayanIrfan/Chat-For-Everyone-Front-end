@@ -8,13 +8,13 @@ const MyUser = () => {
       <div className={styles.MyUser__minibox}>
         <div className={styles.MyUser__datacontainer}>
           <AccountCircleIcon
-            style={{ color: "gray", fontSize: "5.7rem" }}
+            style={{ color: "gray", fontSize: "5.8rem" }}
             className={styles.MyUser__avatar}
           />
           <div className={styles.onlineDisplay}>
             <h2>User.</h2>
-            <h4 style={{ display: "flex", alignItems: "center" }}>
-              <FiberManualRecordIcon style={{ color: "green" }} />
+            <h4 style={{ display: "flex", alignItems: "center"}}>
+              <FiberManualRecordIcon style={{ color: "#41CA00", fontSize: 15 }} />
               <span>Online</span>
             </h4>
           </div>

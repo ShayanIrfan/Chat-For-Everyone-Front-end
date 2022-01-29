@@ -1,14 +1,14 @@
 .UsersList__main{
-    border: 2px solid green;
     height: 80%;
 }
 
 .ChatHead{
-    padding: 10px;
+    padding: 19px 15px;
     display: flex;
     flex-wrap: wrap;
     /* justify-content: space-around; */
     position: relative;
+    align-items: center;
 }
 
 .ChatHead h1 {
@@ -16,10 +16,10 @@
 }
 
 .icons {
-    line-height: 54px;
     position: absolute;
     right: 0;
     width: 77px;
+    margin-top: 10px;
 }
 
 .searchIcon{
@@ -30,27 +30,27 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    padding: 4px 10px;
-    height: 70px;
+    padding: 4px 0px;
+    height: 65px;
+    width: 300px;
+    margin-left: 5px;
+    border-bottom: 2px solid #5ae0fe;
 }
 
 .individualMember:hover {
     background-color: #404040;
 }
 
+.chatMembers {
+    overflow: auto;
+    height: 489px;
+}
+
 .chatMembersInfo p{
     margin: 0;
-    padding-top: 4px;
+    padding-top: 2px;
 }
 
 .chatMembersInfo{
     padding-left: 4%;
-}
-
-.individualMember::after{
-    content: '';
-    height: 2px;
-    background-color: #5ae0fe;
-    width: 90%;
-    margin: auto;
 }

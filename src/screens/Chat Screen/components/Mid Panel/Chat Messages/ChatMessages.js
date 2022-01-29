@@ -23,14 +23,26 @@ const ChatMessages = () => {
             msg: "hifdfdfj"
         },
         {
-            user: 1,
+            user: 2,
             name: "Muzammil",
             msg: "hifdfdfjfddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
         },
         {
-            user: 1,
+            user: 2,
             name: "Muzammil",
             msg: "hifdfdfj"
+        },
+        {
+            user: 2,
+            name: "Muzammil",
+            msg: "hello world!!!!!!!!!!!!!!!!!!!!!!!!!!!!",
+
+        },
+        {
+            user: 2,
+            name: "Muzammil",
+            msg: "hello world!!!!!!!!!!!!!!!!!!!!!!!!!!!!",
+
         },
         {
             user: 2,
@@ -63,10 +75,9 @@ const ChatMessages = () => {
             {data.map((dat, index) =>
             (
                 <div className={dat.user == 1 ? Styles.Box1 : Styles.Box2} key={index} ref={chatBox}>
-                    <h3>{dat.user == 2 ? "You" : dat.name}</h3>
                     <Card variant="outlined" className={Styles.msg}>
-                        <CardContent>
-                            <Typography variant="p" component="div" style={{ fontSize: "16px", marginTop: "5px" }}>
+                        <CardContent style={{padding: "11px 10px"}}>
+                            <Typography variant="p" component="div" style={{ fontSize: "15px"}}>
                                 {dat.msg}
                             </Typography>
                         </CardContent>
