@@ -3,7 +3,7 @@ import Styles from "./UserTitle.module.css";
 import { useState } from 'react';
 import PersonOutlineSharpIcon from '@mui/icons-material/PersonOutlineSharp';
 const UserTitle = () => {
-    let [username, setUsername] = useState('Rogers')
+    let [username, setUsername] = useState('Shayan Irfan')
     let [onlineStatus, setonlineStatus] = useState(false)
 
     return (
@@ -13,8 +13,8 @@ const UserTitle = () => {
                 {username}
             </div>
             <div className={Styles.UserTitle__status} >
-                    <span><PersonOutlineSharpIcon style={{ fontSize: '35px', color: onlineStatus ? '#41CA00' : 'hsl(0, 0%, 20%)' }} /></span>
-                    <span style={{ marginLeft: 3 }}>{onlineStatus ? "Active Now" : "Offline"}</span>
+                    <span><PersonOutlineSharpIcon style={{ fontSize: '30px', color: onlineStatus ? '#41CA00' : 'hsl(0, 0%, 20%)' }} /></span>
+                    <span style={{ marginLeft: 3, fontSize: 15 }}>{onlineStatus ? "Active Now" : "Offline"}</span>
             </div>
             </h4>
         </div>

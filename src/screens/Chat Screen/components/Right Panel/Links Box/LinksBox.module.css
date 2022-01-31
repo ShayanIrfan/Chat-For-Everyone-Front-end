@@ -27,10 +27,11 @@
     padding-left: 5px;
     padding-bottom: 5px;
     padding-top: 5px;
-    /* justify-content: space-around; */
-    border-bottom:2px solid #5ae0fe;
+    border-bottom: 0.5px solid #414141;
+    /* box-shadow: 0 4px 2px -4px #878686; */
+    transition: all .3s;
 }
 
 .Files__doc:hover {
-    background-color: #3333;
+    background-color: #26474d;
 }

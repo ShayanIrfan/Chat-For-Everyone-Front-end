@@ -5,7 +5,7 @@ const MediaBox = () => {
   return (
     <div className={Styles.MediaBox__main} >
       <div className={Styles.MediaHead}>
-          <h1>Media</h1>
+          <h2>Media</h2>
       </div>
 
       <div className={Styles.Media__container}>

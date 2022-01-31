@@ -2,7 +2,6 @@
     height: 75%;
     overflow: auto;
     padding: 20px;
-    position: relative;
     border-right: 1px solid #878686;
     border-left: 1px solid #878686;
 }
@@ -12,13 +11,11 @@
     margin:1.5% 0 1.5%;
 	padding: 0 0 0 10px;
 	vertical-align: top;
-		 
 }
 
 .Box2{
     overflow: hidden; 
     margin: 1.5% 0 1.5%;
-
 }
 
 .Box2 h3{

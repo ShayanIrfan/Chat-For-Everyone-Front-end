@@ -5,7 +5,7 @@ const FilesBox = () => {
     return (
         <div className={Styles.FilesBox__main} >
             <div className={Styles.MediaHead}>
-                <h1>Files</h1>
+                <h2>Files</h2>
             </div>
 
             <div className={Styles.Files__docMain}>

@@ -5,7 +5,7 @@ const LinksBox = () => {
     return (
         <div className={Styles.LinksBox__main} >
             <div className={Styles.MediaHead}>
-                <h1>Links</h1>
+                <h2>Links</h2>
             </div>
 
             <div className={Styles.Files__main}>

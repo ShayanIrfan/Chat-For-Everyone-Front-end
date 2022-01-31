@@ -19,11 +19,19 @@
     position: absolute;
     right: 0;
     width: 77px;
-    margin-top: 10px;
+    margin-top: 8px;
 }
 
 .searchIcon{
     margin-left: 16px;
+}
+
+.searchIcon, .addComment {
+    transition: all .3s;
+}
+
+.searchIcon:hover, .addComment:hover {
+    color: #5ae0fe;
 }
 
 .individualMember{
@@ -34,11 +42,14 @@
     height: 65px;
     width: 300px;
     margin-left: 5px;
-    border-bottom: 2px solid #5ae0fe;
+    border-bottom: 0.5px solid #414141;
+    /* box-shadow: 0 4px 2px -4px #878686; */
+    transition: all .3s;
 }
 
 .individualMember:hover {
-    background-color: #404040;
+    background-color: #26474d;
+    /* box-shadow: 0 4px 16px -4px gray; */
 }
 
 .chatMembers {
@@ -48,9 +59,9 @@
 
 .chatMembersInfo p{
     margin: 0;
-    padding-top: 2px;
+    padding-top: 1px;
 }
 
 .chatMembersInfo{
-    padding-left: 4%;
+    padding-left: 3%;
 }

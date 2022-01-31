@@ -3,17 +3,17 @@
     border-right: 1px solid #878686;
     border-left: 1px solid #878686;
     height: 15%;
-    padding-top: 5px;
+    padding-top: 15px;
 }
 .UserTitle__name{
     display: flex;
     justify-content: center;
     font-style: var(--headings-font);
-    font-size: 40px;
+    font-size: 30px;
     font-weight: 700;
 }
 .UserTitle__status{
-    margin-top: -7px;
+    margin-top: -5px;
     display: flex;
     align-items: center;
     align-content: center;
