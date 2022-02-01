@@ -98,9 +98,17 @@ img {
 
   /*========== Reusable CSS ==========*/
 
-  .subDiv{
-    padding: 1rem 4rem 0;
-  }
+.subDiv{
+  padding: 1rem 4rem 0;
+  width: 1280px;
+  height: 720px;
+  background-color: hsl(0, 0%, 9%);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Montserrat', sans-serif;
+}
 
 
 .app__main {

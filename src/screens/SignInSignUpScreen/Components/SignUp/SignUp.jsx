@@ -3,47 +3,15 @@ import styles from "./SignUp.module.css";
 import style from "../../../../app.module.css";
 import cx from "classnames";
 
-const SignUp = () => {
-  // STATES
-
-  const [themeToggle, setThemeToggle] = useState(false);
-
-  // FUNCTIONS
-
-  useEffect(() => {
-    const themeChanger = () => {
-      themeToggle
-        ? document.body.classList.add(`${style.darkTheme}`)
-        : document.body.classList.remove(`${style.darkTheme}`);
-    };
-    themeChanger();
-    const icon = () => {
-      themeToggle ? (
-        <span class="iconify" data-icon="carbon:sun"></span>
-      ) : (
-        <span class="iconify" data-icon="clarity:moon-line"></span>
-      );
-    };
-  }, [themeToggle]);
+const SignUp = ({ changeState }) => {
 
   return (
-    <main>
       <div className={style.subDiv}>
         <header className={styles.header}>
-          <>
-            <p className={styles.Logo}>BlockChainSmokers</p>
-          </>
-          <div onClick={() => setThemeToggle(!themeToggle)}>
-            <i
-              className={cx(
-                `uil ${themeToggle ? `uil-sun` : `uil-moon`}`,
-                styles.sunIcon
-              )}
-            />
-          </div>
+          <p className={styles.Logo}>BlockChainSmokers</p>
         </header>
         <div className={styles.formDiv}>
-          <form onSubmit={() => {}}>
+          <form onSubmit={() => { }}>
             <div>
               <p className={styles.label}>Email</p>
               <input className={styles.inputField} type="email" required />
@@ -68,11 +36,10 @@ const SignUp = () => {
           </form>
           <div className={styles.signInBtnDiv}>
             <p>Already have an account?</p>
-            <button className={styles.signInBtn}>Sign In.</button>
+            <button className={styles.signInBtn} onClick={() => changeState("Sign in")}>Sign In.</button>
           </div>
         </div>
       </div>
-    </main>
   );
 };
 

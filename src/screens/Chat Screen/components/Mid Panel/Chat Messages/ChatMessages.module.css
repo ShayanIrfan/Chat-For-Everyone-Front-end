@@ -44,6 +44,6 @@
     text-align: end;
     border-radius: 30px 2px 30px 30px;
     margin-top: 5px;
-    background-color: #018AA7;
+    background-color: hsl(190, 99%, 33%);
     color: hsl(0, 0%, 100%);
 }

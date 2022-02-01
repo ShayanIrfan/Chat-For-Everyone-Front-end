@@ -9,6 +9,7 @@ function App() {
       <Routes>
         <Route path="/" element={<SignInSignUp />} />
         <Route path="/chat" element={<ChatScreen />} />
+        <Route path="/settings" element={<SettingsScreen />} />
       </Routes>
     </div>
   );

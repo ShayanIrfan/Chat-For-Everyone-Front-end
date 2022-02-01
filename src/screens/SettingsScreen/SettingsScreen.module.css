@@ -1,9 +1,6 @@
 
 .headerDiv{
-    display: grid;
     height: 10vh;
-    grid-template-columns: 0.1fr 2fr;
-    align-items: center;
 }
 
 .backBtn{
@@ -26,9 +23,9 @@
 
 .title{
     text-align: center;
+    margin-bottom: auto;
     font-family: var(--headings-font);
     font-size: var(--h1-font-size);
-    color: var(--Text-color);
     font-weight: var(--font-bold);
 }
 
@@ -38,34 +35,25 @@
 }
 
 .userCredentials{
+    display: flex;
     height: 15vh;
-    display: grid;
-    grid-template-columns: 0.4fr 3fr 0.1fr;
-    gap: 1rem;
-    margin-bottom: 3%;
-}
-
-.userImg{
-    background-color: var(--Fifteen-percent-color);
-    border-radius: 100%;
-    width: auto;
-    height: auto;
+    align-items: center;
+    margin-bottom: 3%; 
 }
 
 .userData{
-    align-self: center;
+    margin-left: 5px;
+    /* align-self: center; */
 }
 
 .userData h2{
     font-size: var(--h2-font-size);
-    color: var(--Text-color);
     font-weight: var(--font-bold);
     font-family: var(--headings-font);
 }
 
 .userData p{
     font-size: var(--small-font-size);
-    color: var(--Text-color);
     font-family: var(--body-font);
 }
 
@@ -94,9 +82,6 @@
     align-items: center;
     background-color: transparent;
     padding: 0.5rem 0;
-    display: grid;
-    grid-template-columns: 0.2fr 1fr;
-    gap: 1rem;
 }
 
 .sectionBtn:hover{
@@ -104,7 +89,7 @@
 }
 
 .underLine{
-    border-bottom: 2px solid var(--Five-percent-color);
+    border-bottom: 1px solid var(--Five-percent-color);
     margin: bottom 1rem;
 }
 
@@ -117,15 +102,29 @@
 .BtnText{
     font-size: var(--normal-font-size);
     font-weight: var(--font-semi-bold);
-    color: var(--Text-color);
+    color: hsl(0, 0%, 100%);
+    font-family: 'Montserrat', sans-serif;
+    margin-left: 10px;
 }
 
 .branding{
     text-align: center;
     /* border-top: 2px solid var(--Five-percent-color);
     padding-top: 1rem; */
-    color: var(--Text-color);
     font-family: var(--headings-font);
     font-weight: var(--font-semi-bold);
-    
+    position: relative;
+    font-size: 17px;
+    padding-top: 42px;
+}
+
+.branding::after {
+    content: '';
+    position: absolute;
+    bottom: -7px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 3%;
+    height: 2px;
+    background-color: var(--Five-percent-color);
 }

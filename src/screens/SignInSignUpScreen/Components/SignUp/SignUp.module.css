@@ -1,7 +1,3 @@
-main{
-    overflow-x: hidden !important;
-}
-
 .header{
     width: 100%;
     height: 10vh;
@@ -22,8 +18,7 @@ main{
 }
 
 .formDiv{
-    height: 87vh;
-    padding: 7% 30% 0;
+    padding: 7% 32% 0;
 }
 
 .label{
@@ -35,14 +30,14 @@ main{
 
 .inputField{
     margin-bottom: 0.7rem;
-    background-color: var(--Fifteen-percent-color);
+    background-color: #414141;
     border: none;
     width: 100%;
     border-radius: 3px;
-    padding: 0.75rem 1rem;
-    font-family: var(--body-font);
-    font-size: var(--small-font-size);
-    color: var(--Text-color);
+    padding: 0.8rem 1rem;
+    font-family: var(--headings-font);
+    font-size: 0.94rem;
+    color: hsl(0deg 0% 100% / 81%);
 }
 
 .inputField:focus{
@@ -50,7 +45,7 @@ main{
 }
 
 .submitBtn{
-    background-color: var(--Five-percent-color);
+    background-color: hsl(191deg 58% 47%);
     border: none;
     width: 100%;
     border-radius: 3px;
@@ -63,7 +58,7 @@ main{
 
 .submitBtn:hover{
     cursor: pointer;
-    background-color: var(--hover-color);
+    background-color: hsl(191, 99%, 67%);
 }
 
 .signInBtnDiv{
@@ -73,22 +68,22 @@ main{
 }
 
 .signInBtnDiv p{
-    font: var(--headings-font);
-    font-weight: var(--font-bold);
-    color: var(--Text-color);
+    color: hsl(0, 0%, 100%);
+    font-size: 15px;
 }
 
 .signInBtn{
-    margin-left: 0.2rem;
-    background-color: transparent;
+    margin-left: 0.7rem;
     border: none;
-    font: var(--headings-font);
+    background-color: transparent;
+    font-family: 'Montserrat', sans-serif;
     font-weight: var(--font-bold);
+    font-size: 15px;
     color: var(--Five-percent-color);
     transition: 0.3s all;
 }
 
 .signInBtn:hover{
     cursor: pointer;
-    color: var(--hover-color);
+    color: hsl(191, 99%, 67%);
 }

@@ -1,70 +1,46 @@
-import React, { useEffect, useState } from "react";
+import React, { useRef } from "react";
 import styles from "./SignIn.module.css";
 import style from "../../../../app.module.css";
-import cx from "classnames";
 
-const SignIn = () => {
-  // STATES
+const SignIn = ({ changeState }) => {
 
-  const [themeToggle, setThemeToggle] = useState(false);
-
-  // FUNCTIONS
-
-  useEffect(() => {
-    const themeChanger = () => {
-      themeToggle
-        ? document.body.classList.add(`${style.darkTheme}`)
-        : document.body.classList.remove(`${style.darkTheme}`);
-    };
-    themeChanger();
-  }, [themeToggle]);
+  const remeberParaRef = useRef();
+  const inputCheck = useRef();
 
   return (
-    <main>
-      <div className={style.subDiv}>
-        <header className={styles.header}>
-          <>
-            <p className={styles.Logo}>BlockChainSmokers</p>
-          </>
-          <div onClick={() => setThemeToggle(!themeToggle)}>
-            <i
-              className={cx(
-                `uil ${themeToggle ? `uil-sun` : `uil-moon`}`,
-                styles.sunIcon
-              )}
-            />
+    <div className={style.subDiv}>
+      <header className={styles.header}>
+        <p className={styles.Logo}>BlockChainSmokers</p>
+      </header>
+      <div className={styles.formDiv}>
+        <form onSubmit={() => { }}>
+          <div>
+            <p className={styles.label}>Email</p>
+            <input className={styles.inputField} type="email" required />
           </div>
-        </header>
-        <div className={styles.formDiv}>
-          <form onSubmit={() => {}}>
-            <div>
-              <p className={styles.label}>Email</p>
-              <input className={styles.inputField} type="email" required />
-            </div>
-            <div>
-              <p className={styles.label}>Password</p>
-              <input className={styles.inputField} type="password" required />
-            </div>
-            <div className={styles.checkBoxDiv}>
-              <label>
-                <input type="checkbox" />
-                <span className={styles.checkBox} />
-              </label>
-              <p className={styles.checkBoxText}>Remember Me</p>
-            </div>
-            <div>
-              <button className={styles.submitBtn} type="submit">
-                Sign In
-              </button>
-            </div>
-          </form>
-          <div className={styles.signUpBtnDiv}>
-            <p>Don't have an account?</p>
-            <button className={styles.signUpBtn}>Sign Up.</button>
+          <div>
+            <p className={styles.label}>Password</p>
+            <input className={styles.inputField} type="password" required />
           </div>
+          <div className={styles.checkBoxDiv}>
+            <label onMouseOver={() => remeberParaRef.current.style.color = "hsl(191, 99%, 67%)"} onMouseOut={() => {if(inputCheck.current.checked) {remeberParaRef.current.style.color = "hsl(191, 99%, 67%)"} else{remeberParaRef.current.style.color = "hsl(190, 99%, 33%)"}}} >
+              <input type="checkbox" ref={inputCheck}/>
+              <span className={styles.checkBox} />
+            </label>
+            <p className={styles.checkBoxText} ref={remeberParaRef}>Remember Me</p>
+          </div>
+          <div>
+            <button className={styles.submitBtn} type="submit">
+              Sign In
+            </button>
+          </div>
+        </form>
+        <div className={styles.signUpBtnDiv}>
+          <p>Don't have an account?</p>
+          <button className={styles.signUpBtn} onClick={() => changeState("Sign up")}>Sign Up.</button>
         </div>
       </div>
-    </main>
+    </div>
   );
 };
 
