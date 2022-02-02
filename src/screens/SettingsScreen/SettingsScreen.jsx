@@ -11,11 +11,9 @@ const SettingsScreen = () => {
                 <button className={styles.backBtn}>
                     <i className={cx(`uil uil-corner-up-left-alt`, styles.backIconBtn)} />
                 </button>
-                <span>
-                    <h1 className={styles.title}>
-                        Settings
-                    </h1>
-                </span>
+                <h1 className={styles.title}>
+                    Settings
+                </h1>
             </header>
 
             {/* <div className={styles.divisionline} /> */}
@@ -34,9 +32,6 @@ const SettingsScreen = () => {
                         Can't talk BlockChainSmokers Only...
                     </p>
                 </div>
-                <div className={styles.themeChangerBtn}>
-                    <i className={cx(`uil uil-moon`, styles.sunIcon)} />
-                </div>
             </div>
             <div>
                 <div className={styles.chatsSetting}>
@@ -48,7 +43,7 @@ const SettingsScreen = () => {
 
                             <button className={styles.sectionBtn}>
                                 <>
-                                    <i className={cx(`uil uil-trash-alt`, styles.trashIcon, styles.BtnIcon)} />
+                                    <i className={cx(`uil uil-trash-alt`, styles.trashIcon, styles.DelBtnIcon)} />
                                 </>
 
                                 <span className={styles.BtnText}>
@@ -63,17 +58,6 @@ const SettingsScreen = () => {
                         Account
                     </p>
                     <div className={styles.sectionBtns}>
-                        <div className={styles.underLine}>
-                            <button className={styles.sectionBtn}>
-                                <>
-                                    <i className={cx(`uil uil-users-alt`, styles.trashIcon, styles.BtnIcon)} />
-                                </>
-
-                                <span className={styles.BtnText}>
-                                    Add another Account
-                                </span>
-                            </button>
-                        </div>
                         <div className={styles.underLine}>
                             <button className={styles.sectionBtn}>
                                 <>

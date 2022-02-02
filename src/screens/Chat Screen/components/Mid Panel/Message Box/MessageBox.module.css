@@ -18,6 +18,20 @@
     background-color: #404040;
 }
 
+.inputText{
+    width: 91%;
+    height: 24px;
+    font-size: 15px;
+    font-family: 'Montserrat', sans-serif;
+    color: hsla(0, 0%, 100%, 0.808);
+    background: none;
+    border: none;
+}
+
+.inputText:focus{
+    outline: none;
+}
+
 .sendMsg{
     font-size: 28px;
     color: hsla(0, 0%, 100%, 0.808);
@@ -25,7 +39,7 @@
 }
 
 .attachFile, .mic {
-    font-size: 26px; 
+    font-size: 25px; 
     color: hsla(0, 0%, 100%, 0.808);
     transition: all .3s
 }

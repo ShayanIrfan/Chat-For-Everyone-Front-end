@@ -2,9 +2,12 @@ import React from "react";
 import styles from "./MyUser.module.css";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
+import { useSelector } from "react-redux";
 
 const MyUser = () => {
-  let name = "Mohammad Hassan Rasheed"
+  const me = useSelector(state => state.me)
+  const name = me.firstName + " " + me.lastName;
+
   return (
       <div className={styles.MyUser__minibox}>
         <div className={styles.MyUser__datacontainer}>

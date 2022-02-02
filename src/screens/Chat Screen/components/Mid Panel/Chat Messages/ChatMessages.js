@@ -1,87 +1,31 @@
 import React, { useState, useRef, useEffect } from 'react'
 import Styles from "./ChatMessages.module.css";
+import { useSelector } from "react-redux";
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 import { Card } from '@mui/material';
 import Slide from '@mui/material/Slide'
-const ChatMessages = () => {
+
+const ChatMessages = ({ chats }) => {
     const [classs, setClasss] = useState(false);
-    console.log(classs)
-
-    const [data, setData] = useState([
-        {
-            user: 1,
-            name: "Shayan",
-            msg: "hidfdfd"
-        },
-
-        {
-            user: 2,
-            name: "Muzammil",
-            msg: "hifdfdfdfjahsdkldfdfdfdfdfdfdgggggggggfffffffffffffffffhjj"
-        },
-        {
-            user: 2,
-            name: "Muzammil",
-            msg: "hifdfdfj"
-        },
-        {
-            user: 2,
-            name: "Muzammil",
-            msg: "hifdfdfjfddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
-        },
-        {
-            user: 2,
-            name: "Muzammil",
-            msg: "hifdfdfj"
-        },
-        {
-            user: 2,
-            name: "Muzammil",
-            msg: "hello world!!!!!!!!!!!!!!!!!!!!!!!!!!!!",
-
-        },
-        {
-            user: 2,
-            name: "Muzammil",
-            msg: "hello world!!!!!!!!!!!!!!!!!!!!!!!!!!!!",
-
-        },
-        {
-            user: 2,
-            name: "Muzammil",
-            msg: "hello world!!!!!!!!!!!!!!!!!!!!!!!!!!!!",
-
-        },
-        {
-            user: 2,
-            name: "Muzammil",
-            msg: "hello world!!!!!!!!!!!!!!!!!!!!!!!!!!!!",
-
-        },
-        {
-            user: 2,
-            name: "Muzammil",
-            msg: "hello world!!!!!!!!!!!!!!!!!!!!!!!!!!!!",
-
-        }
-    ])
+    const me = useSelector(state => state.me)
 
     useEffect(() => {
         chatBox.current?.scrollIntoView({ transition: "smooth" });
-    }, [data])
+    }, [chats])
 
+    console.log((me.firstName + " " + me.lastName))
     const chatBox = useRef();
 
     return (
         <div className={Styles.ChatMessages__main}>
-            {data.map((dat, index) =>
+            {chats.map((data, index) =>
             (
-                <div className={dat.user == 1 ? Styles.Box1 : Styles.Box2} key={index} ref={chatBox}>
+                <div className={(data.name === (me.firstName + " " + me.lastName)) ? Styles.Box2 : Styles.Box1} key={index} ref={chatBox}>
                     <Card variant="outlined" className={Styles.msg}>
-                        <CardContent style={{padding: "11px 10px"}}>
-                            <Typography variant="p" component="div" style={{ fontSize: "15px"}}>
-                                {dat.msg}
+                        <CardContent style={{ padding: "11px 10px" }}>
+                            <Typography variant="p" component="div" style={{ fontSize: "15px" }}>
+                                {data.msg}
                             </Typography>
                         </CardContent>
                     </Card>
