@@ -4,9 +4,9 @@ import { useSelector } from "react-redux";
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 import { Card } from '@mui/material';
-import Slide from '@mui/material/Slide'
 
 const ChatMessages = ({ chats }) => {
+    console.log(chats);
     const [classs, setClasss] = useState(false);
     const me = useSelector(state => state.me)
 
@@ -14,7 +14,6 @@ const ChatMessages = ({ chats }) => {
         chatBox.current?.scrollIntoView({ transition: "smooth" });
     }, [chats])
 
-    console.log((me.firstName + " " + me.lastName))
     const chatBox = useRef();
 
     return (

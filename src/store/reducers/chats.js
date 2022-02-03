@@ -21,7 +21,7 @@ const initialState = {
     "1029834023980233_1203910239801923": [
         {
             msg: "Hi",
-            name: "Mohammad Hassan Raasheed",
+            name: "Mohammad Hassan Rasheed",
             status: "seen"
         },
         {
@@ -31,7 +31,7 @@ const initialState = {
         },
         {
             msg: "ki hal chaaal?",
-            name: "Mohammad Hassan Raasheed",
+            name: "Mohammad Hassan Rasheed",
             status: "unseen"
         }
     ],
@@ -64,15 +64,17 @@ const chatsSlice = createSlice({
     initialState,
     reducers: {
         statusUdpate: (state, action) => {
-            state[action.payload.room].map(v => {
-                if (v.name !== action.payload.name) v.status = "seen";
+            state[action.payload.session_id].slice(0).reverse().some(v => {
+                if (v.name === action.payload.userName && v.status !== "seen") {
+                    v.status = "seen"
+                } else {
+                    return true;
+                }
             })
-            return { ...state };
         },
         addMsg: (state, action) => {
             state[action.payload.session_id] === undefined ? state[action.payload.session_id] = [{ msg: action.payload.msg, name: action.payload.name, status: action.payload.action }]
                 : state[action.payload.session_id] = [...state[action.payload.session_id], { msg: action.payload.msg, name: action.payload.name, status: action.payload.action }]
-            return ({ ...state });
         }
     }
 })

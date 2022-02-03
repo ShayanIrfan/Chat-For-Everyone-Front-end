@@ -65,3 +65,7 @@
 .chatMembersInfo{
     padding-left: 3%;
 }
+
+.chatMembersInfoNoti{
+    font-weight: bolder;
+}

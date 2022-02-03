@@ -9,8 +9,8 @@ const ChatScreen = () => {
 
   return (
     <div className={style.app__main}>
-      <LeftPanel setChat={setChat}/>
-      <MidPanel chatToShow={chatToShow}/>
+      <LeftPanel setChat={setChat} />
+      <MidPanel chatToShow={chatToShow} />
       <RightPanel />
     </div>
   );

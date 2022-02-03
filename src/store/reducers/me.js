@@ -13,8 +13,10 @@ const mySlice = createSlice({
     name: 'me',
     initialState,
     reducers: {
-
+        removePass: (state, action) => ({...state, password: action.payload.password})
     },
 })
+
+export const { removePass } = mySlice.actions;
 
 export default mySlice.reducer;

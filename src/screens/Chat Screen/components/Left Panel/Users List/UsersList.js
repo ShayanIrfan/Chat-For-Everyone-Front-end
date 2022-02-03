@@ -1,6 +1,7 @@
 import React from 'react'
 import Styles from "./UsersList.module.css";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { statusUdpate } from "../../../../../store/reducers/chats"
 
 const UsersList = ({ setChat }) => {
     const rooms = useSelector(state => state.rooms)
@@ -8,15 +9,7 @@ const UsersList = ({ setChat }) => {
     const me = useSelector(state => state.me);
     const chats = useSelector(state => state.chats);
 
-    const userFinding = (val) => {
-        let user;
-        users.map(v => {
-            if (v.firstName + " " + v.lastName === val) {
-                user = v;
-            }
-        })
-        return user
-    }
+    const dispatch = useDispatch()
 
     return (
         <div className={Styles.UsersList__main} >
@@ -36,25 +29,53 @@ const UsersList = ({ setChat }) => {
                 {rooms.slice(0).reverse().map((val, index) => {
                     let userToShow;
                     if (val.createdBy === (me.firstName + " " + me.lastName)) {
-                        userToShow = userFinding(val.for);
+                        users.some(v => {
+                            if ((v.firstName + " " + v.lastName) === val.for) {
+                                userToShow = v;
+                                return true;
+                            }
+                        });
                     } else {
-                        userToShow = userFinding(val.createdBy);
+                        users.some(v => {
+                            if ((v.firstName + " " + v.lastName) === val.createdBy) {
+                                userToShow = v;
+                                return true;
+                            }
+                        });
                     }
-                    const name = (userToShow.firstName + " " + userToShow.lastName).split(" ");
 
+                    let name;
+                    if (userToShow) {
+                        name = (userToShow.firstName + " " + userToShow.lastName).split(" ");
+                    } else {
+                        name = ["User", "deleted"];
+                    }
+
+                    
                     const msgToshow = chats[val.manual_id][(chats[val.manual_id].length) - 1].msg;
 
+                    let count = 0;
+                    chats[val.manual_id].slice(0).reverse().some(v => {
+                        if (v.name !== me.firstName + " " + me.lastName && v.status !== "seen") {
+                            count++;
+                        } else {
+                            return true;
+                        }
+                    })
+
                     return (
-                        <div className={Styles.individualMember} key={index} onClick={() => setChat({session_id:val.manual_id, userName:name})}>
+                        <div className={Styles.individualMember} key={index} onClick={() => {
+                            dispatch(statusUdpate({ session_id: val.manual_id, userName: (userToShow.firstName + " " + userToShow.lastName) }));
+                            setChat({ session_id: val.manual_id, userName: name })
+                        }}>
                             <div className={Styles.profile}>
-                                {userToShow.image.length !== 0 ?
+                                {userToShow && userToShow.image.length !== 0 ?
                                     <img src={userToShow.img} />
                                     :
                                     <span className="iconify" data-icon="carbon:user-avatar-filled" style={{ color: "rgb(120 120 120)" }} data-width="55"></span>}
 
                             </div>
-
-                            <div className={Styles.chatMembersInfo}>
+                            <div className={`${Styles.chatMembersInfo} ${count !== 0 && Styles.chatMembersInfoNoti}`}>
                                 <p style={{ fontSize: "16px" }}>{name[0]} {name[1]}</p>
                                 <p style={{ fontSize: "12px" }}>{msgToshow}</p>
                             </div>
