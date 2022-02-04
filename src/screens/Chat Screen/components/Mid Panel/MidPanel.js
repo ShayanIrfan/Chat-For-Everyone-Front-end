@@ -16,7 +16,7 @@ const MidPanel = ({ chatToShow }) => {
         const data = {
             session_id: chatToShow.session_id,
             msg: val,
-            name: me.firstName + " " + me.lastName,
+            by: me.id,
             status: "unseen"
         }
         dispatch(addMsg(data));

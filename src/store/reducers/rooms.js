@@ -2,18 +2,18 @@ import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = [
     {
-        createdBy: "Shayan Irfan",
-        for: "Obaid Nadeem",
-        manual_id: "1203910239801923_89467584989823422"
+        createdBy: "1203910239801923",
+        for: "8946758498982342",
+        manual_id: "1203910239801923_8946758498982342"
     },
     {
-        createdBy: "Mohammad Hassan Rasheed",
-        for: "Shayan Irfan",
+        createdBy: "1029834023980233",
+        for: "1203910239801923",
         manual_id: "1029834023980233_1203910239801923"
     },
     {
-        createdBy: "Muzammil Siddiqui",
-        for: "Shayan Irfan",
+        createdBy: "0934850439580332",
+        for: "1203910239801923",
         manual_id: "0934850439580332_1203910239801923"
     }
 ]

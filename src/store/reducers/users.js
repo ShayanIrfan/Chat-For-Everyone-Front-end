@@ -59,10 +59,19 @@ const usersSlice = createSlice({
                     return true;
                 }
             })
+        },
+        updateName: (state, action) => {
+            state.some(v => {
+                if (v.id === action.payload.id) {
+                    v.firstName = action.payload.firstName;
+                    v.lastName = action.payload.lastName;
+                    return true;
+                }
+            })
         }
     }
 })
 
-export const { updateStatusToOnline, updateStatusToOffline, addUser, removeUser } = usersSlice.actions;
+export const { updateStatusToOnline, updateStatusToOffline, addUser, removeUser, updateName } = usersSlice.actions;
 
 export default usersSlice.reducer;

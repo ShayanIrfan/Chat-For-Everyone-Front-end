@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import styles from "./SignIn.module.css";
 import style from "../../../../app.module.css";
+import logo from "../../../../logo/Chat For Everyone.png"
 
 const SignIn = ({ changeState }) => {
 
@@ -10,7 +11,7 @@ const SignIn = ({ changeState }) => {
   return (
     <div className={style.subDiv}>
       <header className={styles.header}>
-        <p className={styles.Logo}>BlockChainSmokers</p>
+        <img src={logo} alt="Chat For Everyone" width="198px" />
       </header>
       <div className={styles.formDiv}>
         <form onSubmit={() => { }}>
@@ -23,8 +24,8 @@ const SignIn = ({ changeState }) => {
             <input className={styles.inputField} type="password" required />
           </div>
           <div className={styles.checkBoxDiv}>
-            <label onMouseOver={() => remeberParaRef.current.style.color = "hsl(191, 99%, 67%)"} onMouseOut={() => {if(inputCheck.current.checked) {remeberParaRef.current.style.color = "hsl(191, 99%, 67%)"} else{remeberParaRef.current.style.color = "hsl(190, 99%, 33%)"}}} >
-              <input type="checkbox" ref={inputCheck}/>
+            <label onMouseOver={() => remeberParaRef.current.style.color = "hsl(191, 99%, 67%)"} onMouseOut={() => { if (inputCheck.current.checked) { remeberParaRef.current.style.color = "hsl(191, 99%, 67%)" } else { remeberParaRef.current.style.color = "hsl(190, 99%, 33%)" } }} >
+              <input type="checkbox" ref={inputCheck} />
               <span className={styles.checkBox} />
             </label>
             <p className={styles.checkBoxText} ref={remeberParaRef}>Remember Me</p>

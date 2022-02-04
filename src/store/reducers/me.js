@@ -1,22 +1,23 @@
-import { createSlice} from '@reduxjs/toolkit'
+import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
     firstName: "Shayan",
     lastName: "Irfan",
     id: "1203910239801923",
     image: "",
-    email: "shayan@gmail.com",
-    password: "DoNz2087"
+    email: "shayan@gmail.com"
 }
 
 const mySlice = createSlice({
     name: 'me',
     initialState,
     reducers: {
-        removePass: (state, action) => ({...state, password: action.payload.password})
+        fillUpState: (state, action) => ({ ...action.payload }),
+        fillOutState: (state) => ({}),
+        updateName: (state, action) => ({ ...state, firstName: action.payload.firstName, lastName: action.payload.lastName })
     },
 })
 
-export const { removePass } = mySlice.actions;
+export const { fillUpState, fillOutState, updateName } = mySlice.actions;
 
 export default mySlice.reducer;

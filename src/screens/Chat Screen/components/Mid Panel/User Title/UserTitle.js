@@ -2,6 +2,7 @@ import React from 'react'
 import Styles from "./UserTitle.module.css";
 import { useState } from 'react';
 import PersonOutlineSharpIcon from '@mui/icons-material/PersonOutlineSharp';
+
 const UserTitle = ({ userName }) => {
     let [onlineStatus, setonlineStatus] = useState(false)
 

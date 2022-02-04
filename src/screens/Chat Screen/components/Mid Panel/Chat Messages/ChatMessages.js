@@ -6,7 +6,6 @@ import Typography from '@mui/material/Typography';
 import { Card } from '@mui/material';
 
 const ChatMessages = ({ chats }) => {
-    console.log(chats);
     const [classs, setClasss] = useState(false);
     const me = useSelector(state => state.me)
 
@@ -20,7 +19,7 @@ const ChatMessages = ({ chats }) => {
         <div className={Styles.ChatMessages__main}>
             {chats.map((data, index) =>
             (
-                <div className={(data.name === (me.firstName + " " + me.lastName)) ? Styles.Box2 : Styles.Box1} key={index} ref={chatBox}>
+                <div className={(data.by === me.id) ? Styles.Box2 : Styles.Box1} key={index} ref={chatBox}>
                     <Card variant="outlined" className={Styles.msg}>
                         <CardContent style={{ padding: "11px 10px" }}>
                             <Typography variant="p" component="div" style={{ fontSize: "15px" }}>

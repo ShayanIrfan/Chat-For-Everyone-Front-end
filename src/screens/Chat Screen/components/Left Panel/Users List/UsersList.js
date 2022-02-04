@@ -28,16 +28,16 @@ const UsersList = ({ setChat }) => {
 
                 {rooms.slice(0).reverse().map((val, index) => {
                     let userToShow;
-                    if (val.createdBy === (me.firstName + " " + me.lastName)) {
+                    if (val.createdBy === me.id) {
                         users.some(v => {
-                            if ((v.firstName + " " + v.lastName) === val.for) {
+                            if (v.id === val.for) {
                                 userToShow = v;
                                 return true;
                             }
                         });
                     } else {
                         users.some(v => {
-                            if ((v.firstName + " " + v.lastName) === val.createdBy) {
+                            if (v.id === val.createdBy) {
                                 userToShow = v;
                                 return true;
                             }
@@ -51,12 +51,12 @@ const UsersList = ({ setChat }) => {
                         name = ["User", "deleted"];
                     }
 
-                    
+
                     const msgToshow = chats[val.manual_id][(chats[val.manual_id].length) - 1].msg;
 
                     let count = 0;
                     chats[val.manual_id].slice(0).reverse().some(v => {
-                        if (v.name !== me.firstName + " " + me.lastName && v.status !== "seen") {
+                        if (v.by !== me.id && v.status !== "seen") {
                             count++;
                         } else {
                             return true;
@@ -65,7 +65,7 @@ const UsersList = ({ setChat }) => {
 
                     return (
                         <div className={Styles.individualMember} key={index} onClick={() => {
-                            dispatch(statusUdpate({ session_id: val.manual_id, userName: (userToShow.firstName + " " + userToShow.lastName) }));
+                            dispatch(statusUdpate({ session_id: val.manual_id, my_id: me.id }));
                             setChat({ session_id: val.manual_id, userName: name })
                         }}>
                             <div className={Styles.profile}>
@@ -80,7 +80,12 @@ const UsersList = ({ setChat }) => {
                                 <p style={{ fontSize: "12px" }}>{msgToshow}</p>
                             </div>
 
-                            <div style={{ marginLeft: "auto", marginRight: "5px" }}>
+                            <div className={`${Styles.rightText} ${count !== 0 && Styles.rightTextNoti}`} style={{ marginRight: "5px", display: "flex", alignItems: "center", width: 70 }}>
+                                {
+                                    count !== 0 && <div className={Styles.count}>
+                                        {count}
+                                    </div>
+                                }
                                 <p style={{ fontSize: "11px" }}>0:12 Pst</p>
                             </div>
                         </div>
